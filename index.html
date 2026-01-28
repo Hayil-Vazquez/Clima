@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Trends Clishboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Panel de Trends Clishboard</h1>
+</header>
+
+<main class="container">
+
+    <!-- Buscador -->
+    <section class="search-box">
+        <input type="text" id="cityInput" placeholder="City / Coordinates (ej: 19.43,-99.13)">
+        <button id="searchBtn">Search</button>
+    </section>
+
+    <!-- Estado de carga -->
+    <section id="statusBox" class="status hidden">
+        <div class="spinner"></div>
+        <p>Loading data... Please wait.</p>
+    </section>
+
+    <!-- Error -->
+    <section id="errorBox" class="error hidden"></section>
+
+    <!-- Gráfica -->
+    <section class="chart-container">
+        <canvas id="weatherChart"></canvas>
+    </section>
+
+    <!-- Leyenda -->
+    <section class="legend">
+        <div><span class="red"></span> Temp > 30°C</div>
+        <div><span class="blue"></span> Temp < 10°C</div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
